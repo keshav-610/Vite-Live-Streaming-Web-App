@@ -52,7 +52,7 @@ const Home = () => {
               </button>
               <button 
                 className="text-indigo-500 font-bold"
-                onClick={() => navigate(`/room/${uuid()}`)} 
+                onClick={() => navigate(`/room/${uuid()}?role=Host`)} // Default to Host when starting a new stream
               >
                 Or Start a new live Stream
               </button>

@@ -1,6 +1,12 @@
-const RoomComponent = ({ roomID }) => {
+import { useParams } from "react-router-dom";
+import LiveStream from "./LiveStream";
+
+const RoomComponent = () => {
+  const { roomID } = useParams(); 
   return (
-    <div>Room Component: {roomID}</div>
+    <div>
+      <LiveStream roomID={roomID}/>
+    </div>
   );
 };
 
