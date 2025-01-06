@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import useUser from "../hooks/useUser";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuid } from "uuid"; 
+import Footer from "../components/Footer";
 
 const Home = () => {
   const { fullName, setFullName } = useUser();
@@ -13,8 +14,8 @@ const Home = () => {
   }, [setFullName]);
 
   return (
-    <div className="w-full h-screen bg-black">
-      <div className="flex items-center justify-center h-full flex-col gap-6">
+    <div className="w-full h-screen bg-black flex flex-col">
+      <div className="flex items-center justify-center flex-grow flex-col gap-6">
         <div>
           <h1 className="font-bold text-6xl font-sans text-white tracking-tight">
             Have a Live Stream
@@ -60,6 +61,7 @@ const Home = () => {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

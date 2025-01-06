@@ -6,7 +6,7 @@ import useUser from '../hooks/useUser';
 const LiveStream = ({ roomID }) => {
     const [searchParams] = useSearchParams();
     const location = useLocation();
-    const roleStr = searchParams.get("role") || "Host";  // Default role to Host if not provided
+    const roleStr = searchParams.get("role") || "Host";  
     const fullName = useUser();
 
     const role = {
@@ -45,7 +45,7 @@ const LiveStream = ({ roomID }) => {
             container: element,
             scenario: {
                 mode: ZegoUIKitPrebuilt.LiveStreaming,
-                config: { role }, // Make sure role is passed correctly
+                config: { role }, 
             },
             sharedLinks,
         });
